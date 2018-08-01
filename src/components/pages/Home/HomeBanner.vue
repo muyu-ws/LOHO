@@ -4,16 +4,16 @@
         <div
             v-for = " (banner, i) in banners "
             :key = " i "
-        class="swiper-slide">
-            <img :src="banner.image_url" alt="">
+            class="swiper-slide">
+            <img :src="banner.pic" alt="">
         </div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import Swiper from "swiper";
+import Vue from 'vue'
+import Swiper from 'swiper'
 export default {
   name: "AppHomeBannerY",
   data() {
@@ -24,9 +24,8 @@ export default {
   methods: {
       
     getBanners() {
-      this.$http.get('/lh/index', {
-
-      }).then( res => {
+      this.$http.get('/lh/index').then( res => {
+        console.log(res.data)
        this.banners=res.data.result.focus
        Vue.nextTick(() => {
                      new Swiper(this.$refs.el, {
@@ -43,3 +42,23 @@ export default {
   }
 };
 </script>
+// lang=scss 表示写的是scss代码
+<style scoped lang = "scss" >
+     .app-home-banner-y {
+        .swiper-wrapper {
+            width: 100%;
+            height: 1.875rem;
+        }
+        .swiper-slide {
+            img {width: 100%; }
+        }
+        .swiper-pagination  {
+            .swiper-pagination {
+                width: 5px; height: 5px;
+            }
+            .swiper-pagination-active {
+                background: #fff;
+            }
+        }
+    }
+</style>
