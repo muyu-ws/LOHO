@@ -1,15 +1,18 @@
 <template>
   <div id="app-home">
       <app-home-banner-y></app-home-banner-y>
+      <app-home-nav-list></app-home-nav-list>
   </div>
 </template>
 
 <script>
 import AppHomeBannerY from './HomeBanner'
+import AppHomeNavList from './HomeNavList'
 export default {
   name: 'AppHome',
   components:{
-      AppHomeBannerY
+      AppHomeBannerY,
+      AppHomeNavList
   }
 }
 </script>

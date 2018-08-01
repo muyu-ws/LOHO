@@ -1,4 +1,6 @@
 import Vue from 'vue'
+//swiper css
+import 'swiper/dist/css/swiper.min.css'
 
 // 全局通用样式
 import '../stylesheets/main.scss'
@@ -12,9 +14,5 @@ computed_rem()
 
 import axios from 'axios'
 Vue.prototype.$http = axios
-
-//filters
-
-
 
 Vue.config.productionTip = false
