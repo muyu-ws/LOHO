@@ -1,9 +1,9 @@
 <template>
   <div id="app-home-nav-list">
     <ul class="nav-list">
-      <li 
-        v-for = "( nav, i ) in navs" 
-        :key = "nav.id" 
+      <li
+        v-for = "nav in navs" 
+        :key = "nav.tid" 
         class="nav-item">
                 <img :src="nav.pic" alt="">
                 <span>{{nav.tag}}</span>
@@ -23,6 +23,7 @@ export default {
     getNav() {
       this.$http.get("/lh/index").then(res => {
         this.navs = res.data.result.cates;
+
       });
     }
   },

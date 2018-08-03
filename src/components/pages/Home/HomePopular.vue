@@ -28,7 +28,7 @@ export default {
     getPopular() {
       this.$http.get("/lh/index").then(res => {
         this.populars = res.data.result.popular.show;
-         console.log(this.populars);
+        //  console.log(this.populars);
       });
     }
   },
@@ -37,10 +37,10 @@ export default {
   }
 };
 </script>
-<style scoped lang = "scss" scoped>
+<style scoped lang = "scss" >
 
  .popular{
-     height: 6.85rem;
+     height: 6.30rem;
      margin-top:0.1rem;
 
      .title{
@@ -53,6 +53,8 @@ export default {
          text-align: center;
 
          h2{
+             font-size: 0.16rem;
+             font-weight: 700;
              line-height: 0.22rem;
              padding: 0.1rem;
          }
@@ -80,6 +82,9 @@ export default {
             align-items: center;
             justify-content: space-between;
              display: flex;
+             z-index: -10;
+             border-bottom:1px solid #CCC;
+             border-right:1px solid #CCC;
              width: 50%;
              padding: 0.12rem;
              background: #fff;

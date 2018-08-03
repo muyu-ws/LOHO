@@ -3,11 +3,17 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 import Home from "../components/pages/Home/Home";
+import Marker from "../components/pages/Marker/Marker";
 const routes =  [
         {
             path: '/',
             name: 'home',
             component:Home
+        },
+        {
+            path: '/marker',
+            name: 'marker',
+            component: Marker
         }
     ]
 const router = new VueRouter({
