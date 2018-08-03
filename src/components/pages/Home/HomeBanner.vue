@@ -25,7 +25,7 @@ export default {
       
     getBanners() {
       this.$http.get('/lh/index').then( res => {
-        console.log(res.data)
+    //    console.log(res.data.result.focus);
        this.banners=res.data.result.focus
        Vue.nextTick(() => {
                      new Swiper(this.$refs.el, {
