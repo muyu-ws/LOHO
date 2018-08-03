@@ -5,6 +5,7 @@ import App from './App'
 import './modules/config'
 import router from './router/index'
 /* eslint-disable no-new */
+console.log(router)
 new Vue({
   el: '#app',
   router,

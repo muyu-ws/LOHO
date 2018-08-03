@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
+import  GoodList from '../components/pages/Goodlist/GoodList'
 Vue.use(VueRouter)
 import Home from "../components/pages/Home/Home";
 import Marker from "../components/pages/Marker/Marker";
