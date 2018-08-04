@@ -3,9 +3,11 @@
       <app-home-banner-y></app-home-banner-y>
       <app-home-nav-list></app-home-nav-list>
       <app-home-nav></app-home-nav>
+       <app-home-header></app-home-header>
       
       <app-home-logo></app-home-logo>
       <app-home-popular></app-home-popular>
+       <app-home-special></app-home-special>
   </div>
 </template>
 
@@ -14,7 +16,10 @@ import AppHomeBannerY from './HomeBanner'
 import AppHomeNavList from './HomeNavList'
 import AppHomeNav from './HomeNav'
 import AppHomeLogo from './HomeLogo'
+import AppHomeSpecial from './HomeSpecial'
 import AppHomePopular from './HomePopular'
+import AppHomeHeader from './HomeHeader'
+
 export default {
   name: 'AppHome',
   components:{
@@ -22,13 +27,17 @@ export default {
       AppHomeNavList,
       AppHomeNav,
       AppHomeLogo,
-      AppHomePopular
+      AppHomePopular,
+      AppHomeSpecial,
+      AppHomeHeader
   }
 }
 </script>
 // lang=scss 表示写的是scss代码
 <style scoped lang = "scss">
   .app-home{
-    overflow-x: hidden;
+    overflow-x: auto;
+    margin-bottom:0.6rem; 
+    margin-top:0.56rem;
   }
 </style>

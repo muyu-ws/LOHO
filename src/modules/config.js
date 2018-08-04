@@ -15,4 +15,7 @@ computed_rem()
 import axios from 'axios'
 Vue.prototype.$http = axios
 
+//全局组件
+import './ui-components'
+
 Vue.config.productionTip = false

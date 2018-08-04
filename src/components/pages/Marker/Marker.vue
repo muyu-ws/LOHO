@@ -1,0 +1,27 @@
+
+<template>
+    <div class="app-marker">
+        <app-marker-header></app-marker-header>
+         <app-marker-list-map></app-marker-list-map>
+    </div>
+</template>
+
+
+<script>
+import AppMarkerHeader from './MarkerHeader'
+import AppMarkerListMap from './MarkerListMap'
+
+export default {
+  name: 'AppMarker',
+  components:{
+      AppMarkerHeader,
+      AppMarkerListMap
+  }
+}
+</script>
+// lang=scss 表示写的是scss代码
+<style scoped lang = "scss">
+    .app-marker{
+        margin-top:0.55rem; 
+    }
+</style>
