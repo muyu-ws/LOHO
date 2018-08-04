@@ -17,6 +17,13 @@ module.exports = {
         pathRewrite: {
           '^/lh': ''
         }
+      },
+      '/mh': {
+        target: 'http://image.loho88.com',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/mh': ''
+        }
       }
     },
     // Various Dev Server settings

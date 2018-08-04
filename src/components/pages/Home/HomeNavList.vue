@@ -1,13 +1,14 @@
 <template>
   <div id="app-home-nav-list">
     <ul class="nav-list">
-      <li
+      <router-link 
+        exact :to="{name:'List',query:{id:nav.cid,type:nav.tid ,name:nav.tag}}"
         v-for = "nav in navs" 
         :key = "nav.tid" 
         class="nav-item">
-                <img :src="nav.pic" alt="">
+                <img :src="nav.pic">
                 <span>{{nav.tag}}</span>
-            </li>
+        </router-link>
     </ul>
   </div>
 </template>
@@ -17,23 +18,38 @@ export default {
   data() {
     return {
       navs: []
-    };
+    }
+  },
+  
+  created() {
+    this.getNav();
   },
   methods: {
     getNav() {
       this.$http.get("/lh/index").then(res => {
+        
         this.navs = res.data.result.cates;
-
+        console.log(this.$route)
       });
+    },
+    chuangcan(){
+      this.$router.push({
+      path: '/List/',
+      query: {
+        id: cid,
+        name:tag,
+        type:tid
+
+     }
+     
+    })
     }
   },
-  created() {
-    this.getNav();
-  }
+    
 };
 </script>
 
-<style scoped lang = "scss" scoped>
+<style lang = "scss" scoped>
 
   .nav-list {
     background: #fff;

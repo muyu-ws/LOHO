@@ -1,7 +1,7 @@
 <template>
   <div class="app-marker-header content-padded docs-icons content-block">
       <ul class="ul-list">
-          <li><i class="fa fa-chevron-left"></i></li>
+          <li><i class="fa fa-chevron-left" @click="$router.go(-1)"></i></li>
           <li>查找体验店</li>
           <li><i class="fa fa-cart-plus"></i></li>
           <li><i class="fa fa-user-o"></i></li>

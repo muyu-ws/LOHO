@@ -1,18 +1,21 @@
 <template>
   <div class="app-home">
+     <app-home-header></app-home-header>
       <app-home-banner-y></app-home-banner-y>
       <app-home-nav-list></app-home-nav-list>
-      <app-home-nav></app-home-nav>
-       <app-home-header></app-home-header>
-      
       <app-home-logo></app-home-logo>
       <app-home-popular></app-home-popular>
-       <app-home-special></app-home-special>
+      <app-home-special></app-home-special>
+
+      <app-home-nav></app-home-nav>
+
+
   </div>
 </template>
 
 <script>
 import AppHomeBannerY from './HomeBanner'
+
 import AppHomeNavList from './HomeNavList'
 import AppHomeNav from './HomeNav'
 import AppHomeLogo from './HomeLogo'
@@ -29,7 +32,8 @@ export default {
       AppHomeLogo,
       AppHomePopular,
       AppHomeSpecial,
-      AppHomeHeader
+      AppHomeHeader,
+  
   }
 }
 </script>
@@ -39,5 +43,6 @@ export default {
     overflow-x: auto;
     margin-bottom:0.6rem; 
     margin-top:0.56rem;
+
   }
 </style>

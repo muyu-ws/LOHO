@@ -51,7 +51,7 @@ export default {
     // 发起请求获取后端数据
     this.getgoodlist()
     this.$http.get(`/lh/classify/${this.type}`).then(res => {
-      console.log(res);
+      // console.log(res);
     });
     // window.addEventListener('scoll')window.innerHeight + $(document).scrollTop() == document.body.scrollHeight
   },
@@ -65,8 +65,9 @@ export default {
     },
     //获取商品列表
     getgoodlist() { 
-      this.$http.get(`/lh/search/?e=${this.id}&page=${this.page}${this.filter!=""?'&sort='+this.filter:''}`).then(res => {
+      this.$http.get(`/lh/search/?e=${this.type}&page=${this.page}${this.filter!=""?'&sort='+this.filter:''}`).then(res => {
         this.arr = this.arr.concat(res.data.result.data)
+        console.log(res.data.result);
         this.page++
         this.isloadmove = false
         if(this.arr.length == res.data.result.count){
@@ -123,4 +124,59 @@ export default {
 
 <style scoped lang="scss">
 
+//main列表
+.Goodlist {
+    overflow-x: hidden;
+    // margin-top: 58px;
+  }
+  .product-main {
+    .produc-main-ul {
+      display: flex;
+      flex-wrap: wrap;
+      background: #ccc;
+      li {
+        height: 2.24rem;
+        flex-wrap: wrap;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        width: 50%;
+        background: #fff;
+        font-size: 0.12rem;
+        border: 3px solid #f2f2f2;
+        img {
+          width: 100%;
+        }
+        .produc-main-p {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          padding: 0 12px;
+        }
+        span:nth-child(1) {
+          color: red;
+          font-size: 0.16rem;
+          font-weight: bold;
+        }
+        span:nth-child(2) {
+          color: #c1c1c1;
+        }
+      }
+    }
+  }
+
+  //filter筛选
+  .filter{
+      display:flex;
+      justify-content:space-between;
+      height:0.47rem;
+      background: #fff;
+      border-top:1PX solid #ccc;
+      li{
+          width:25%;
+          line-height:0.47rem;
+        text-align:center;
+      }
+  }
 </style>

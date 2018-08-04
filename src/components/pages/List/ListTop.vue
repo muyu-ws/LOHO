@@ -36,4 +36,31 @@ created(){
 // lang=scss 表示写的是scss代码
 <style scoped lang = "scss">
 
+//头部样式
+.appHeaderTop{
+    height: 0.55rem;
+}
+.app-home-nav {
+ position: fixed;
+ top: 0;
+ width: 100%;
+ height: 0.55rem;
+ background: #fff;
+ border-top: 1px #ccc solid;
+ display: flex;
+
+ a {
+   flex-grow: 1;
+   height: 100%;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   justify-content: space-around;
+
+   i {
+     font-size: 0.26rem;
+   }
+ }
+}
+
 </style>
