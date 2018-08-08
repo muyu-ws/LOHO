@@ -13,13 +13,16 @@ import AppMarkerHeader from './MarkerHeader'
 import AppMarkerListMap from './MarkerListMap'
 import AppMarkerMain from './MarkerMain'
 
+
+
 export default {
   name: 'AppMarker',
   components:{
       AppMarkerHeader,
       AppMarkerListMap,
       AppMarkerMain
-  }
+  },
+
 }
 </script>
 // lang=scss 表示写的是scss代码

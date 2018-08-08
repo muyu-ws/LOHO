@@ -29,7 +29,7 @@ export default {
     getmarker() {
       this.$http.get("/lh/store/102").then(res => {
         this.markers = res.data.result.stores;
-        console.log(this.markers)
+        // console.log(this.markers)
 
       });
     }

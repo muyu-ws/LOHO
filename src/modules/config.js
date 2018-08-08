@@ -10,6 +10,9 @@ import computed_rem from './rem'
 //计算rem
 computed_rem()
 
+import VueCookies from "vue-cookies";
+Vue.use(VueCookies)
+
 // axios
 
 import axios from 'axios'
