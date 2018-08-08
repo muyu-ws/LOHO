@@ -7,11 +7,11 @@
         </div>
         <img src="http://img.loho88.com/images/2018/zssxydd.jpg">
         <ul class="popular-list">
-            <li v-for="popular in populars" :key="popular.gid">
+            <router-link tag="li" v-for="popular in populars" :key="popular.gid" exact :to="{name:'GoodDetail',query:{id:popular.gid}}">
                 <span>{{popular.tag}}</span>
                 <p>{{popular.tag_en}}</p>
                 <img :src="popular.pic" alt="">
-            </li>
+            </router-link>
         </ul>
         </div>
   </div>
@@ -28,19 +28,22 @@ export default {
     getPopular() {
       this.$http.get("/lh/index").then(res => {
         this.populars = res.data.result.popular.show;
-        //  console.log(this.populars);
+         console.log(this.populars);
       });
-    }
+    },
+
+   
   },
   created() {
     this.getPopular();
+    
   }
 };
 </script>
-<style scoped lang = "scss" >
+<style  lang = "scss" scoped>
 
  .popular{
-     height: 6.30rem;
+     /* height: 6.30rem; */
      margin-top:0.1rem;
 
      .title{
@@ -82,7 +85,6 @@ export default {
             align-items: center;
             justify-content: space-between;
              display: flex;
-             z-index: -10;
              border-bottom:1px solid #CCC;
              border-right:1px solid #CCC;
              width: 50%;
@@ -90,8 +92,8 @@ export default {
              background: #fff;
 
              span{
-                    height: 40px;
-                    line-height: 20px;
+                    height:0.4rem;
+                    line-height: 0.2rem;
                     width: 110%;
                     text-align: center;
 

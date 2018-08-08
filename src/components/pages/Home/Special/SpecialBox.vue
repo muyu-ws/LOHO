@@ -8,21 +8,21 @@
             <img :src="data.img.pic" alt="">
         </div>
         <ul class="ul-list">
-            <li class="list-left fl">
+            <router-link class="list-left fl" tag="li" :to="{name:'GoodDetail',query:{id:data.show[0].gid}}">
                 <span>{{data.show[0].tag}}</span>
                 <p>{{data.show[0].tag_en}}</p>
                 <img :src="data.show[0].pic" alt="">
-            </li>
-            <li  class="list-right fr">
+            </router-link>
+            <router-link  class="list-right fr" tag="li" :to="{name:'GoodDetail',query:{id:data.show[1].gid}}">
                 <span>{{data.show[1].tag}}</span>
                 <p>{{data.show[1].tag_en}}</p>
                 <img :src="data.show[1].pic" alt="">
-            </li>
-            <li class="list-right fr">
+            </router-link>
+            <router-link class="list-right fr" tag="li" :to="{name:'GoodDetail',query:{id:data.show[2].gid}}">
                 <span>{{data.show[2].tag}}</span>
                 <p>{{data.show[2].tag_en}}</p>
                 <img :src="data.show[2].pic" alt="">
-            </li>
+            </router-link>
         </ul>
     </div>
 </template>

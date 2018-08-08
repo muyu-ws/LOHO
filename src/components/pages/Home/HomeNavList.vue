@@ -18,69 +18,63 @@ export default {
   data() {
     return {
       navs: []
-    }
+    };
   },
-  
+
   created() {
     this.getNav();
   },
   methods: {
     getNav() {
       this.$http.get("/lh/index").then(res => {
-        
         this.navs = res.data.result.cates;
         // console.log(this.navs)
       });
     },
-    chuangcan(){
+    chuangcan() {
       this.$router.push({
-      path: '/List/',
-      query: {
-        id: cid,
-        name:tag,
-        type:tid
-
-     }
-     
-    })
+        path: "/List/",
+        query: {
+          id: cid,
+          name: tag,
+          type: tid
+        }
+      });
     }
-  },
-    
+  }
 };
 </script>
 
 <style lang = "scss" scoped>
-
-  .nav-list {
-    background: #fff;
-    border-bottom: 1px solid #e1e1e1;
-    margin: 0 auto 0.08rem;
-    padding: 0 0 0.3rem;
-    min-height: 1.65rem;
+.nav-list {
+  background: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  margin: 0 auto 0.08rem;
+  padding: 0 0 0.3rem;
+  min-height: 1.65rem;
+  display: flex;
+  flex-wrap: wrap;
+  .nav-item {
+    padding: 0;
+    width: 25%;
+    height: 1.09rem;
+    min-height: 0.9rem;
     display: flex;
-    flex-wrap: wrap;
-    .nav-item {
-      padding: 0;
-      width: 25%;
-      height:1.09rem;
-      min-height: 0.9rem;
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      justify-content: space-between;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
 
-      img {
-        width: 54%;
-        padding-top: 0.18rem;
-      }
-      span {
-        font-size: 0.14rem;
-        line-height: 0.22rem;
-        text-align: center;
-        color: #333;
-        display: block;
-      }
+    img {
+      width: 54%;
+      padding-top: 0.18rem;
+    }
+    span {
+      font-size: 0.14rem;
+      line-height: 0.22rem;
+      text-align: center;
+      color: #333;
+      display: block;
     }
   }
-
+}
 </style>

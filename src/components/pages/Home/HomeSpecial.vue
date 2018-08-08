@@ -23,7 +23,7 @@ export default {
         getSpecials(){
             this.$http.get("/lh/index").then(res => {
             this.specials = res.data.result.classify;
-            console.log(this.specials);
+            // console.log(this.specials);
       });
         }
     },
