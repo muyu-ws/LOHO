@@ -150,7 +150,7 @@ export default {
         this.unioned = res.data.result.unioned;
 
         this.params = res.data.result.arguments;
-        // console.log( res.data.result.arguments)
+        console.log( res.data.result.arguments)
 
 
         let _str = res.data.result.txtcontent;

@@ -8,7 +8,7 @@
                <div class="marker-img"><img :src="'http://image.loho88.com/'+marker.store_image" alt=""></div>
                
                <p>地址：{{marker.chineseAddress}}</p>
-               <div class="experience"><router-link tag="a" class="free" :to="{name:'login'}">免费预约直营店验光</router-link><span class="phon"><i class="fa fa-volume-control-phone"></i></span></div>
+               <div class="experience"><router-link tag="a" class="free" :to="{name:'MarkerFree',query:{id:marker.storeId}}">免费预约直营店验光</router-link><span class="phon"><i class="fa fa-volume-control-phone"></i></span></div>
            </li>
        </ul>
     </div>
@@ -29,7 +29,7 @@ export default {
     getmarker() {
       this.$http.get("/lh/store/102").then(res => {
         this.markers = res.data.result.stores;
-        // console.log(this.markers)
+        console.log(this.markers)
 
       });
     }
