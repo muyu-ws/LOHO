@@ -1,7 +1,7 @@
 
 <template>
     <div id="Goodlist">
-        <app-list-top></app-list-top> 
+        <app-list-top :title="name"></app-list-top> 
         <div class="filterbox">
             <ul class="filter">
                 <li @click="filter_f(0)">综合</li>
@@ -19,15 +19,15 @@
             </li>
           </ul>
         </div>
-        <div v-if="isloadmove">加载更多...</div>
-        <div v-if="!isNomore">喂！已经到底了哟</div>
+        <div v-if="isloadmove" class="loading">加载更多...</div>
+        <div v-if="!isNomore" class="loading">喂！已经到底了哟</div>
     </div>
 </template>
 
 <script>
 import AppListMain from "./ListMain";
 import AppListTop from "./ListTop";
-import './list.scss'
+// import './list.scss'
 export default {
   name: "AppListMain",
   data() {
@@ -123,8 +123,7 @@ export default {
 
 
 <style scoped lang="scss">
-
-//main列表
+  //main列表
 .Goodlist {
     overflow-x: hidden;
     // margin-top: 58px;
@@ -178,5 +177,8 @@ export default {
           line-height:0.47rem;
         text-align:center;
       }
+  }
+  .loading{
+    text-align:center;
   }
 </style>

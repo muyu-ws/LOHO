@@ -4,6 +4,8 @@ import Home from "../components/pages/Home/Home"
 import  List from '../components/pages/List/List'
 import  GoodDetail from '../components/pages/gooddetail/gooddetail'
 import Marker from "../components/pages/Marker/Marker";
+import  Choose from '../components/pages/Choose/Choose';
+import  Cart from '../components/pages/Cart/Cart';
 Vue.use(VueRouter)
 
 const routes =  [
@@ -21,6 +23,16 @@ const routes =  [
             path: '/gooddetail',
             name: 'GoodDetail',
             component: GoodDetail
+        },
+        {
+            path: '/choose',
+            name: 'Choose',
+            component: Choose
+        },
+        {
+            path: '/cart',
+            name: 'Cart',
+            component: Cart
         },
         {
             path: '/marker',
