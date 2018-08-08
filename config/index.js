@@ -18,11 +18,11 @@ module.exports = {
           '^/lh': ''
         }
       },
-      '/mh': {
-        target: 'http://image.loho88.com',
+      '/mz': {
+        target: 'https://m.maizuo.com',
         changeOrigin: true,
         pathRewrite: {
-          '^/mh': ''
+          '^/mz': ''
         }
       }
     },

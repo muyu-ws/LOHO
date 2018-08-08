@@ -1,12 +1,12 @@
 <template>
-  <div class="app-marker-header content-padded docs-icons content-block">
+  <div class="app-city-header content-padded docs-icons content-block">
       <ul class="ul-list">
           <li><i class="fa fa-chevron-left" @click="$router.go(-1)"></i></li>
-          <li>查找体验店</li>
+          <li>选择城市</li>
           <li><i class="fa"></i></li>
            <router-link tag="li" exact :to="{name :'login'}"><i class="fa fa-user-o"></i></router-link>
       </ul>
-    
+       
   </div>
   
 </template>
@@ -14,14 +14,13 @@
 <script>
 
 export default {
-  name: 'app-marker-header',
- 
+  name: 'app-city-header',
+    
 }
 </script>
 // lang=scss 表示写的是scss代码
 <style scoped lang = "scss">
-    .app-marker-header{
-        z-index: 10;
+    .app-city-header{
         position: fixed;
         top: 0;
         width: 100%;

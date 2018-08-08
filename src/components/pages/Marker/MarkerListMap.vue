@@ -2,7 +2,7 @@
     <div class="app-marker-list-map content">
         <div class="buttons-tab">
             <a @click="handleClick" class="tab-link button active">列表</a>
-            <a @click="handleClick" class="tab-link button">地图</a>
+            <a @click="handleClick" class="tab-link button active">地图</a>
         </div>
     </div>
   
@@ -18,7 +18,7 @@ export default {
                handleClick () {
                   
                        this.className="active"
-                  console.log(777)
+                //   console.log(777)
                }
            },
     created() {

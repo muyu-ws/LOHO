@@ -1,10 +1,10 @@
 <template>
   <div class="app-home-header content-padded docs-icons">
       <ul class="ul-list">
-          <li>广州 <i class="fa  fa-angle-down"></i></li>
+           <router-link tag="li" exact :to="{name :'city'}">广州 <i class="fa  fa-angle-down"></i></router-link>
           <li><img src="../../../assets/loho.png" alt=""></li>
-          <li><i class="fa fa-cart-plus"></i></li>
-          <li><i class="fa fa-user-o"></i></li>
+          <router-link tag="li" exact :to="{name :''}"><i class="fa fa-shopping-cart"></i></router-link>
+          <router-link tag="li" exact :to="{name :'login'}"><i class="fa fa-user-o"></i></router-link>
       </ul>
   </div>
 </template>

@@ -29,7 +29,7 @@ export default {
       this.$http.get("/lh/index").then(res => {
         
         this.navs = res.data.result.cates;
-        console.log(this.$route)
+        // console.log(this.navs)
       });
     },
     chuangcan(){

@@ -17,10 +17,10 @@ export default {
       return {
           navs:[
               {id:1,title:'首页',icon:'home',name:'home'},
-              {id:2,title:'团购',icon:'calendar',name:''},
+              {id:2,title:'团购',icon:'calendar',name:'https://www.google-analytics.com/analytics.js'},
               {id:3,title:'客服',icon:'podcast',name:''},
               {id:4,title:'附近体验店',icon:'map-marker',name:'marker'},
-              {id:5,title:'我的',icon:'user-o',name:''}
+              {id:5,title:'我的',icon:'user-o',name:'login'}
           ]
       }
   }

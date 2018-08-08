@@ -6,6 +6,7 @@
       <app-home-logo></app-home-logo>
       <app-home-popular></app-home-popular>
       <app-home-special></app-home-special>
+      <app-home-foter></app-home-foter>
 
       <app-home-nav></app-home-nav>
 
@@ -22,6 +23,7 @@ import AppHomeLogo from './HomeLogo'
 import AppHomeSpecial from './HomeSpecial'
 import AppHomePopular from './HomePopular'
 import AppHomeHeader from './HomeHeader'
+import AppHomeFoter from './HomeFoter'
 
 export default {
   name: 'AppHome',
@@ -33,7 +35,7 @@ export default {
       AppHomePopular,
       AppHomeSpecial,
       AppHomeHeader,
-  
+      AppHomeFoter
   }
 }
 </script>
@@ -41,7 +43,7 @@ export default {
 <style scoped lang = "scss">
   .app-home{
     overflow-x: auto;
-    margin-bottom:0.6rem; 
+    margin-bottom:0.55rem; 
     margin-top:0.56rem;
 
   }
