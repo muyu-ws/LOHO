@@ -10,6 +10,7 @@ import  Cart from '../components/pages/Cart/Cart';
 
 import Login from "../components/pages/Login/Login"
 import City from "../components/pages/City/City"
+import Service from "../components/pages/Service/Service"
 
 import store from "../store";
 Vue.use(VueRouter)
@@ -18,7 +19,8 @@ const routes =  [
         {
             path: '/',
             name: 'home',
-            component:Home
+            component:Home,
+
         },
         {
             path: '/list',
@@ -62,6 +64,11 @@ const routes =  [
             path: '/login',
             name: 'login',
             component:Login
+        },
+        {
+            path: '/service',
+            name: 'Service',
+            component: Service
         }
     ]
 const router = new VueRouter({
