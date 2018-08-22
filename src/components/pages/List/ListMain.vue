@@ -31,11 +31,11 @@ export default {
     this.name = this.$route.query.name;
     this.type = this.$route.query.type;
     // 发起请求获取后端数据
-    this.$http.get(`/lh/search/?e=${this.id}&page=1`).then(res => {
+    this.$http.get(this.server_config.lh+`/search/?e=${this.id}&page=1`).then(res => {
       this.arr = res.data.result.data;
       console.log(res);
     });
-    this.$http.get(`/lh/classify/${this.type}`).then(res => {
+    this.$http.get(this.server_config.lh+`/classify/${this.type}`).then(res => {
       console.log(res);
     });
   },

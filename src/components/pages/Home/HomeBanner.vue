@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     getBanners() {
-      this.$http.get(this.server_config.lh +`index`).then(res => {
+      this.$http.get(this.server_config.lh +"/index").then(res => {
         //    console.log(res.data.result.focus);
         this.banners = res.data.result.focus;
         Vue.nextTick(() => {

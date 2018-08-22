@@ -132,7 +132,7 @@ export default {
   //方法
   methods: {
     getImg(src) {
-      return "/mh" + src;
+      return this.server_config.mh + '/'+src;
     },
     getPrice(arr) {
       let price = 0;
@@ -143,14 +143,14 @@ export default {
     },
     getBanners() {
       this.$http.get(this.server_config.lh+`/goods/${this.id}`).then(res => {
-         console.log(res.data);
+        //  console.log(res.data);
         this.banners = res.data.result.info.pics;
         this.info = res.data.result.info;
         this.models = res.data.result.models;
         this.unioned = res.data.result.unioned;
 
         this.params = res.data.result.arguments;
-        console.log( res.data.result.arguments)
+        // console.log( res.data.result.arguments)
 
 
         let _str = res.data.result.txtcontent;
@@ -181,7 +181,7 @@ export default {
     changetab(idx) {
       this.tabIndex = idx;
       if(idx == 1){
-        this.$http.get(`/dt/comment/getGoodsComments.do?barcode=${this.info.goodsSn}&catId=25&curPage=1&jsoncallback=jsonpCb&pageSize=10`).then(res =>{
+        this.$http.get(this.server_config.dt+`/comment/getGoodsComments.do?barcode=${this.info.goodsSn}&catId=25&curPage=1&jsoncallback=jsonpCb&pageSize=10`).then(res =>{
           console.log(JSON.parse(res.data.slice(8,-1)).result)
           this.appraisal = JSON.parse(res.data.slice(8,-1)).result
         })

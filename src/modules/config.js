@@ -18,7 +18,7 @@ import server_config from "./server_config";
 Vue.prototype.server_config = server_config
 
 import md5 from 'js-md5'
-
+Vue.prototype.md5 = md5
 // axios
 
 

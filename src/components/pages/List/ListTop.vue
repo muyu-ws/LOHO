@@ -24,14 +24,14 @@ export default {
   },
   props: ["title"],
   created() {
-    this.$http.get(`/lh/cart/listCartNum/`).then(res => {
+    this.$http.get(this.server_config.lh+`/cart/listCartNum/`).then(res => {
       //   console.log(res.data.cartNum)
       this.cartNun = res.data.cartNum;
     });
   },
   methods: {
     fanhui(){
-      console.log(123)
+      // console.log(123)
       this.$router.go(-1)
     }
   }

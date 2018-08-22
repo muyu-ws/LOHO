@@ -50,7 +50,7 @@ export default {
     this.type = this.$route.query.type;
     // 发起请求获取后端数据
     this.getgoodlist()
-    this.$http.get(`/lh/classify/${this.type}`).then(res => {
+    this.$http.get(this.server_config.lh+`/classify/${this.type}`).then(res => {
       // console.log(res);
     });
     // window.addEventListener('scoll')window.innerHeight + $(document).scrollTop() == document.body.scrollHeight
@@ -65,7 +65,7 @@ export default {
     },
     //获取商品列表
     getgoodlist() { 
-      this.$http.get(`/lh/search/?e=${this.type}&page=${this.page}${this.filter!=""?'&sort='+this.filter:''}`).then(res => {
+      this.$http.get(this.server_config.lh+`/search/?e=${this.type}&page=${this.page}${this.filter!=""?'&sort='+this.filter:''}`).then(res => {
         this.arr = this.arr.concat(res.data.result.data)
         console.log(res.data.result);
         this.page++
