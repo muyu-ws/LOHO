@@ -13,7 +13,14 @@ computed_rem()
 import VueCookies from "vue-cookies";
 Vue.use(VueCookies)
 
+
+import server_config from "./server_config";
+Vue.prototype.server_config = server_config
+
+import md5 from 'js-md5'
+
 // axios
+
 
 import axios from 'axios'
 Vue.prototype.$http = axios

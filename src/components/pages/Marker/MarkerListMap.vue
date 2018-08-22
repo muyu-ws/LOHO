@@ -1,8 +1,7 @@
 <template>
     <div class="app-marker-list-map content">
         <div class="buttons-tab">
-            <a @click="handleClick" class="tab-link button active">列表</a>
-            <a @click="handleClick" class="tab-link button active">地图</a>
+            <a active-class="active" class="tab-link button" v-for="nav in navs" :key="nav.id">{{nav.title}}</a>
         </div>
     </div>
   
@@ -14,21 +13,21 @@
 export default {
   name: 'app-marker-list-map',
 
-   methods: {
-               handleClick () {
-                  
-                       this.className="active"
-                //   console.log(777)
-               }
-           },
-    created() {
-    this.handleClick ();
-  }
+   data(){
+      return {
+          navs:[
+              {id:1,title:'列表'},
+              {id:2,title:'地图'}
+            
+          ]
+      }
+  },
 
 }
 </script>
 // lang=scss 表示写的是scss代码
 <style scoped lang = "scss">
+@import '../../../stylesheets/_base.scss';
     .buttons-tab{
         height: 0.55rem;
         width: 100%;
@@ -41,9 +40,11 @@ export default {
             line-height: 0.55rem;
             text-align: center;
             border: 1px solid #ccc;
+            
+           &.active {
+                color: $base-color;
+            } 
         }
-        .active{
-            border-bottom: 2px solid rgb(185, 8, 8);
-        }
+       
     }
 </style>

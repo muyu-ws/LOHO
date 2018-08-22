@@ -21,7 +21,7 @@ export default {
     },
     methods:{
         getSpecials(){
-            this.$http.get("/lh/index").then(res => {
+            this.$http.get(this.server_config.lh+"/index").then(res => {
             this.specials = res.data.result.classify;
             // console.log(this.specials);
       });

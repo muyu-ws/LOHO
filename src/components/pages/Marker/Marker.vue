@@ -21,6 +21,7 @@ export default {
       AppMarkerHeader,
       AppMarkerListMap,
       AppMarkerMain
+
   },
 
 }

@@ -1,11 +1,12 @@
 
 import axios from 'axios'
 import md5 from 'js-md5'
+import { mz, lh, mh, dt  } from "../../modules/server_config";
 
 import { CHANGE_USER_STATE, CHANGE_USER_INFO } from './const'
 const actions = {
     action_login(context, { code, phone, success, fail }) {
-        axios.post('/mz/v4/api/login?__t=' + Date.now, {
+        axios.post(mz + '/v4/api/login?__t=' + Date.now, {
             code: "",
             codeKey: "",
             loginType: 1,

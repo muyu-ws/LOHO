@@ -20,13 +20,13 @@ export default {
     },
     methods: {
         getCity() {
-        this.$http.get("/lh/store/clist").then(res => {
+        this.$http.get(this.server_config.lh+"/store/clist").then(res => {
             this.citys = res.data.result.list;
             console.log(this.citys)
         });
         },
         getNum() {
-        this.$http.get("/lh/store/clist").then(res => {
+        this.$http.get(this.server_config.lh+"/store/clist").then(res => {
             this.citynum = res.data.result.letters;
         });
         }

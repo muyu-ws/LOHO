@@ -142,7 +142,7 @@ export default {
       return price;
     },
     getBanners() {
-      this.$http.get(`/lh/goods/${this.id}`).then(res => {
+      this.$http.get(this.server_config.lh+`/goods/${this.id}`).then(res => {
          console.log(res.data);
         this.banners = res.data.result.info.pics;
         this.info = res.data.result.info;

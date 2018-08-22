@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     getPopular() {
-      this.$http.get("/lh/index").then(res => {
+      this.$http.get(this.server_config.lh+"/index").then(res => {
         this.populars = res.data.result.popular.show;
          console.log(this.populars);
       });

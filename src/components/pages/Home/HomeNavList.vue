@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     getNav() {
-      this.$http.get("/lh/index").then(res => {
+      this.$http.get(this.server_config.lh+"/index").then(res => {
         this.navs = res.data.result.cates;
         // console.log(this.navs)
       });

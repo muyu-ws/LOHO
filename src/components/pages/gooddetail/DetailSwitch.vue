@@ -18,19 +18,7 @@ export default {
 
   },
   props:['argument'],
-  created() {
-    
-  },
-  components: {},
-  methods: {
-   
-  },
-  mounted(){
-    console.log(this.argument)
-  },
-  beforeCreate() {
 
-  },
   created() {
     'http://user.loho88.com/comment/getGoodsComments.do?barcode=1063031000091&catId=25&curPage=1&jsoncallback=jsonpCb&pageSize=10'
   }

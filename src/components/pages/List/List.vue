@@ -78,10 +78,7 @@ export default {
     },
     //监听滚动
     handleScroll() {
-      var scrollTop =
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop;
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
       if (window.innerHeight + scrollTop >= document.body.scrollHeight&&!this.isloadmove&&this.isNomore) {
         this.isloadmove=true
 

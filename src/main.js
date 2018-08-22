@@ -6,6 +6,9 @@ import './modules/config'
 
 import store from './store'
 import router from './router/index'
+import FastClick from 'fastclick'
+
+FastClick.attach(document.body)
 /* eslint-disable no-new */
 console.log(router)
 new Vue({
